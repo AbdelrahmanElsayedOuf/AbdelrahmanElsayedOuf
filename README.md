@@ -45,7 +45,7 @@ I'm [Abd-Elrahman Elsayed](https://verma-anushka.github.io/anushkaverma/), I'm a
   <p align="center">
     Show ❤️ by starring repositories you find good! 
     <br />
-    ⭐️ From [Abd-Elrahman Elsayed] (https://github.com/Abd-Elrahman-Elsayed)
+    ⭐️ From [Abd-Elrahman Ouf] (https://github.com/AbdelrahmanElsayedOuf)
     <br />
     Also, star and fork this repository if you wish to give this new feature a try!
   </p>
