@@ -7,7 +7,7 @@ I'm [Abd-Elrahman Elsayed](https://verma-anushka.github.io/anushkaverma/), I'm a
 **I have finished ...**
 
  <div>
-    <img width="170" align='left' src="https://www.iti.gov.eg/assets/images/iti-logo.png" >
+    <img width="90" align='left' src="https://iti.gov.eg/assets/images/ColoredLogo.svg" >
     The <strong>9-Month Program</strong> at Information Technology Institute. where I have been performing and developing projects using different web development technologies like the MEAN tech stack and .Net Famework.
   </div>
 
