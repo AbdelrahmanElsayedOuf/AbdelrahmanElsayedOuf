@@ -29,11 +29,11 @@ I'm [Abd-Elrahman Elsayed](https://verma-anushka.github.io/anushkaverma/), I'm a
 **Github Stats:**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Abd-Elrahman-Elsayed&hide=stars&show_icons=true&theme=dracula&line_height=32">
+  <img src="https://github-readme-stats.vercel.app/api?username=AbdelrahmanElsayedOuf&hide=stars&show_icons=true&theme=dracula&line_height=32">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abd-Elrahman-Elsayed&langs_count=8&theme=dracula">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdelrahmanElsayedOuf&langs_count=8&theme=dracula">
 </p>
 
 
@@ -53,6 +53,6 @@ I'm [Abd-Elrahman Elsayed](https://verma-anushka.github.io/anushkaverma/), I'm a
 
 <div align="right">
   
-[![HitCount](http://hits.dwyl.com/Abd-Elrahman-Elsayed/Abd-Elrahman-Elsayed.svg)](http://hits.dwyl.com/Abd-Elrahman-Elsayed/Abd-Elrahman-Elsayed) ![ViewCount](https://views.whatilearened.today/views/github/verma-anushka/verma-anushka.svg) [![Thanks!](https://img.shields.io/badge/Thanks%20for%20visiting-!-1EAEDB.svg)](https://Abd-Elrahman-Elsayed.github.io/Abd-Elrahman-Elsayed/)
+[![HitCount](http://hits.dwyl.com/AbdelrahmanElsayedOuf/AbdelrahmanElsayedOuf.svg)](http://hits.dwyl.com/AbdelrahmanElsayedOuf/AbdelrahmanElsayedOuf) ![ViewCount](https://views.whatilearened.today/views/github/verma-anushka/verma-anushka.svg) [![Thanks!](https://img.shields.io/badge/Thanks%20for%20visiting-!-1EAEDB.svg)](https://AbdelrahmanElsayedOuf.github.io/AbdelrahmanElsayedOuf/)
 
 </div>
