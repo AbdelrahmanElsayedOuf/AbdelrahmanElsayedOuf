@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Abdelrahman Elsayed Ouf — Software Engineer"><title>Abdelrahman Elsayed Ouf — Software Engineer</title><defs><linearGradient id="g-violet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B9A6FF"/><stop offset="1" stop-color="#8A6CFF"/></linearGradient><linearGradient id="g-peach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD2B5"/><stop offset="1" stop-color="#FF9F76"/></linearGradient><linearGradient id="g-mint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A8F0D8"/><stop offset="1" stop-color="#4FCFA6"/></linearGradient><linearGradient id="g-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFE0FF"/><stop offset="1" stop-color="#6AAEFF"/></linearGradient><linearGradient id="g-rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC2D4"/><stop offset="1" stop-color="#FF8FB1"/></linearGradient><linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE6A6"/><stop offset="1" stop-color="#FFC94D"/></linearGradient>
+  <filter id="clay" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="10" dy="12" stdDeviation="11" flood-color="#6252B4" flood-opacity=".22"/>
+    <feDropShadow dx="-7" dy="-7" stdDeviation="8" flood-color="#FFFFFF" flood-opacity=".95"/>
+  </filter>
+  <filter id="clay-sm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="5" dy="6" stdDeviation="5" flood-color="#6252B4" flood-opacity=".22"/>
+    <feDropShadow dx="-4" dy="-4" stdDeviation="4" flood-color="#FFFFFF" flood-opacity=".95"/>
+  </filter>
+  <filter id="inner" x="0" y="0" width="100%" height="100%">
+    <feOffset dx="-7" dy="-7" in="SourceAlpha"/><feGaussianBlur stdDeviation="7" result="b1"/>
+    <feComposite in="SourceAlpha" in2="b1" operator="out" result="i1"/>
+    <feFlood flood-color="#000" flood-opacity=".14"/><feComposite in2="i1" operator="in" result="dark"/>
+    <feOffset dx="7" dy="7" in="SourceAlpha"/><feGaussianBlur stdDeviation="7" result="b2"/>
+    <feComposite in="SourceAlpha" in2="b2" operator="out" result="i2"/>
+    <feFlood flood-color="#fff" flood-opacity=".55"/><feComposite in2="i2" operator="in" result="light"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="dark"/><feMergeNode in="light"/></feMerge>
+  </filter>
+</defs>
+<style>
+  text { font-family: 'Segoe UI', 'Nunito', -apple-system, Helvetica, Arial, sans-serif; }
+  .float { animation: f 6s ease-in-out infinite; transform-box: fill-box; }
+  .float.d2 { animation-delay: -2s; } .float.d3 { animation-delay: -4s; }
+  @keyframes f { 50% { transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) { .float { animation: none; } }
+</style><rect width="1200" height="360" fill="#EEEAFB"/><g class="float"><g filter="url(#clay-sm)"><circle cx="70" cy="70" r="46" fill="url(#g-peach)" filter="url(#inner)"/></g><ellipse cx="53.900000000000006" cy="51.599999999999994" rx="12.88" ry="7.36" fill="#fff" opacity=".55" transform="rotate(-30 53.900000000000006 51.599999999999994)"/></g><g class="float d2"><g filter="url(#clay-sm)"><circle cx="1130" cy="290" r="38" fill="url(#g-mint)" filter="url(#inner)"/></g><ellipse cx="1116.7" cy="274.8" rx="10.64" ry="6.08" fill="#fff" opacity=".55" transform="rotate(-30 1116.7 274.8)"/></g><g class="float d3"><g filter="url(#clay-sm)"><circle cx="1110" cy="70" r="22" fill="url(#g-sun)" filter="url(#inner)"/></g><ellipse cx="1102.3" cy="61.2" rx="6.16" ry="3.52" fill="#fff" opacity=".55" transform="rotate(-30 1102.3 61.2)"/></g><g filter="url(#clay)"><rect x="60" y="40" width="1080" height="280" rx="44" fill="#F7F5FF" filter="url(#inner)"/></g><g filter="url(#clay)"><rect x="110" y="100" width="150" height="150" rx="46" fill="url(#g-violet)" filter="url(#inner)"/></g><text x="185" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#fff">AO</text><text x="300" y="132" font-size="18" font-weight="800" fill="#7C5CFF" letter-spacing="2">HEY THERE, I'M</text><text x="298" y="190" font-size="50" font-weight="800" fill="#2A2547">Abdelrahman Elsayed Ouf</text><text x="300" y="228" font-size="22" font-weight="600" fill="#645E86">Software Engineer · .NET · Angular · Dynamics 365</text><g filter="url(#clay-sm)"><rect x="300" y="252" width="187.6" height="32" rx="16.0" fill="url(#g-violet)" filter="url(#inner)"/></g><text x="393.8" y="273.04" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3+ years experience</text><g filter="url(#clay-sm)"><rect x="501.6" y="252" width="246.4" height="32" rx="16.0" fill="url(#g-mint)" filter="url(#inner)"/></g><text x="624.8000000000001" y="273.04" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2547">Egypt · Saudi Arabia · UAE</text><g filter="url(#clay-sm)"><rect x="762.0" y="252" width="128.8" height="32" rx="16.0" fill="url(#g-peach)" filter="url(#inner)"/></g><text x="826.4" y="273.04" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2547">Open to work</text></svg>

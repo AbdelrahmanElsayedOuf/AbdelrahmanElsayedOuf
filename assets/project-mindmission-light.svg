@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-label="Mind Mission — E-learning platform (Egypt, Saudi Arabia)"><title>Mind Mission — E-learning platform (Egypt, Saudi Arabia)</title><defs><linearGradient id="g-violet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B9A6FF"/><stop offset="1" stop-color="#8A6CFF"/></linearGradient><linearGradient id="g-peach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD2B5"/><stop offset="1" stop-color="#FF9F76"/></linearGradient><linearGradient id="g-mint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A8F0D8"/><stop offset="1" stop-color="#4FCFA6"/></linearGradient><linearGradient id="g-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFE0FF"/><stop offset="1" stop-color="#6AAEFF"/></linearGradient><linearGradient id="g-rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC2D4"/><stop offset="1" stop-color="#FF8FB1"/></linearGradient><linearGradient id="g-sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE6A6"/><stop offset="1" stop-color="#FFC94D"/></linearGradient>
+  <filter id="clay" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="10" dy="12" stdDeviation="11" flood-color="#6252B4" flood-opacity=".22"/>
+    <feDropShadow dx="-7" dy="-7" stdDeviation="8" flood-color="#FFFFFF" flood-opacity=".95"/>
+  </filter>
+  <filter id="clay-sm" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="5" dy="6" stdDeviation="5" flood-color="#6252B4" flood-opacity=".22"/>
+    <feDropShadow dx="-4" dy="-4" stdDeviation="4" flood-color="#FFFFFF" flood-opacity=".95"/>
+  </filter>
+  <filter id="inner" x="0" y="0" width="100%" height="100%">
+    <feOffset dx="-7" dy="-7" in="SourceAlpha"/><feGaussianBlur stdDeviation="7" result="b1"/>
+    <feComposite in="SourceAlpha" in2="b1" operator="out" result="i1"/>
+    <feFlood flood-color="#000" flood-opacity=".14"/><feComposite in2="i1" operator="in" result="dark"/>
+    <feOffset dx="7" dy="7" in="SourceAlpha"/><feGaussianBlur stdDeviation="7" result="b2"/>
+    <feComposite in="SourceAlpha" in2="b2" operator="out" result="i2"/>
+    <feFlood flood-color="#fff" flood-opacity=".55"/><feComposite in2="i2" operator="in" result="light"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="dark"/><feMergeNode in="light"/></feMerge>
+  </filter>
+</defs>
+<style>
+  text { font-family: 'Segoe UI', 'Nunito', -apple-system, Helvetica, Arial, sans-serif; }
+  .float { animation: f 6s ease-in-out infinite; transform-box: fill-box; }
+  .float.d2 { animation-delay: -2s; } .float.d3 { animation-delay: -4s; }
+  @keyframes f { 50% { transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) { .float { animation: none; } }
+</style><rect width="600" height="330" fill="#EEEAFB"/><g filter="url(#clay)"><rect x="24" y="20" width="552" height="286" rx="36" fill="#F7F5FF" filter="url(#inner)"/></g><g filter="url(#clay-sm)"><rect x="44" y="40" width="170" height="170" rx="30" fill="url(#g-mint)" filter="url(#inner)"/></g><circle cx="190" cy="62" r="34" fill="#fff" opacity=".22"/><circle cx="70" cy="190" r="20" fill="#fff" opacity=".22"/><g class="float"><path d="M87 122 L129 100 L171 122 L129 144 Z" fill="#fff" opacity=".95"/><path d="M105 132 V150 Q129 164 153 150 V132 L129 144 Z" fill="#fff" opacity=".8"/><circle cx="165" cy="148" r="5" fill="#2E9E7C"/></g><text x="240" y="70" font-size="14" font-weight="800" fill="#7C5CFF" letter-spacing="1">E-LEARNING PLATFORM</text><text x="238" y="110" font-size="34" font-weight="800" fill="#2A2547">Mind Mission</text><text x="240" y="142" font-size="16" font-weight="600" fill="#645E86">Udemy-style platform: courses,</text><text x="240" y="166" font-size="16" font-weight="600" fill="#645E86">checkout, instructor tools, BI</text><g filter="url(#clay-sm)"><rect x="44" y="228" width="63.0" height="28" rx="14.0" fill="url(#g-sun)" filter="url(#inner)"/></g><text x="75.5" y="246.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">Egypt</text><g filter="url(#clay-sm)"><rect x="117.0" y="228" width="117.6" height="28" rx="14.0" fill="url(#g-sun)" filter="url(#inner)"/></g><text x="175.8" y="246.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">Saudi Arabia</text><g filter="url(#clay-sm)"><rect x="44" y="266" width="76.6" height="26" rx="13.0" fill="#E9E4FA" filter="url(#inner)"/></g><text x="82.3" y="283.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">Web API</text><g filter="url(#clay-sm)"><rect x="128.6" y="266" width="76.6" height="26" rx="13.0" fill="#E9E4FA" filter="url(#inner)"/></g><text x="166.89999999999998" y="283.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">Angular</text><g filter="url(#clay-sm)"><rect x="213.2" y="266" width="100.0" height="26" rx="13.0" fill="#E9E4FA" filter="url(#inner)"/></g><text x="263.2" y="283.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">SQL Server</text><g filter="url(#clay-sm)"><rect x="321.2" y="266" width="84.4" height="26" rx="13.0" fill="#E9E4FA" filter="url(#inner)"/></g><text x="363.4" y="283.68" text-anchor="middle" font-size="13" font-weight="700" fill="#2A2547">Power BI</text></svg>
