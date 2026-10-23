@@ -628,6 +628,53 @@ def project_need(p, C, w):
     return pad + body + 16 + block + pad
 
 
+def panel_hero(mode):
+    """Name card with an iOS-style dock of contact apps along its bottom edge.
+    One glass panel, sliced into the card body (full width) + four clickable dock slices."""
+    C = compact()
+    G = SECTION_GAP
+    base = card_header(mode)                      # reuse the header content
+    content_bottom = (base.h - 40) if C else 226
+    dock_top = content_bottom + (30 if C else 28)
+    dock_h = 132 if C else 76
+    glass_bottom = dock_top + dock_h + (28 if C else 26)
+    H = glass_bottom + 4 + G
+    d = Doc(W, H, mode, base.title)
+    d.n = 2000
+    d.glass(4, 4, W - 8, glass_bottom - 4, SECTION_R,
+            [("indigo", .08, .1, .45), ("pink", .55, -.1, .35), ("cyan", .95, .8, .45), ("orange", .35, .95, .3)])
+    d.defs += base.defs
+    d.body.extend(base.body[1:])
+    t = d.t
+    # the dock: a recessed frosted tray, like the iOS home-screen dock
+    pad = 24 if C else 36
+    dk = d.uid("dk")
+    d.defs.append(f'<linearGradient id="{dk}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["chip"]}" stop-opacity="{float(t["chip_o"]) * 1.25:.2f}"/>'
+                  f'<stop offset="1" stop-color="{t["chip"]}" stop-opacity="{float(t["chip_o"]) * .7:.2f}"/></linearGradient>')
+    d.body.append(f'<rect x="{pad}" y="{dock_top}" width="{W - pad * 2}" height="{dock_h}" rx="{26 if C else 24}" fill="url(#{dk})" '
+                  f'stroke="{t["chip_stroke"]}" stroke-opacity="{float(t["chip_stroke_o"]) + .03:.2f}"/>')
+    d.body.append(f'<rect x="{pad + 20}" y="{dock_top + 1}" width="{W - pad * 2 - 40}" height="1" fill="#fff" fill-opacity="{t["spec_o"]}"/>')
+    cw = W / 4                       # slice width (click areas)
+    dw = (W - pad * 2) / 4           # visual column width inside the dock
+    for i, (key, label, sub, ico, col) in enumerate(LINK_TILES):
+        cx = pad + i * dw
+        if i:
+            vline(d, cx - .5, dock_top + dock_h * .26, dock_h * .48)
+        if C:
+            ts, fs = 60, 20
+            d.tile(cx + (dw - ts) / 2, dock_top + 16, ts, col, ico)
+            d.body.append(T(cx + dw / 2, dock_top + 16 + ts + 32, label, fs, t["ink"], 680, "middle", ls="-.2"))
+        else:
+            ts, fs, gap = 44, 18, 12
+            group = ts + gap + tw(label, fs)
+            gx = cx + (dw - group) / 2
+            d.tile(gx, dock_top + (dock_h - ts) / 2, ts, col, ico)
+            d.body.append(T(gx + ts + gap, dock_top + dock_h / 2 + fs * .36, label, fs, t["ink"], 700, ls="-.2"))
+    cut = dock_top - 10
+    slices = [(0, 0, W, cut, base.title)] + [(i * cw, cut, cw, H - cut, LINK_TILES[i][1]) for i in range(4)]
+    return d, slices
+
+
 def panel_projects(mode):
     """Header strip + 2×2 grid inside ONE glass panel; sliced into a header and four clickable cells."""
     C = compact()
@@ -790,12 +837,10 @@ def main():
             if stats_only:
                 continue
             C = width < 700
-            LG = 3.2 if C else 4   # 1/3 of the normal section gap around the links row
-            save(f"header{suffix}-{mode}.svg", spaced(card_header(mode), 0, LG))
-            save(f"about{suffix}-{mode}.svg", spaced(with_header(card_about(mode), "About me", "sparkles", "purple", "Cairo · Since 2023"), LG, SECTION_GAP))
+            save(f"about{suffix}-{mode}.svg", spaced(with_header(card_about(mode), "About me", "sparkles", "purple", "Cairo · Since 2023")))
             save(f"toolbox{suffix}-{mode}.svg", spaced(with_header(card_toolbox(mode), "Toolbox", "code", "pink", "6 areas" if C else "6 areas · 30+ tools")))
             save(f"footer{suffix}-{mode}.svg", spaced(card_footer(mode), SECTION_GAP, 0))
-            for prefix, builder, names in [("link", panel_links, [k for k, *_ in LINK_TILES]),
+            for prefix, builder, names in [("hero", panel_hero, ["card"] + [k for k, *_ in LINK_TILES]),
                                            ("project", panel_projects, ["head"] + [p["slug"] for p in PROJECTS])]:
                 pd, slices = builder(mode)
                 for name, (x, y, w, h, title) in zip(names, slices):
