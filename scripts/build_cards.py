@@ -87,6 +87,7 @@ ICONS = {
     "sparkles": '<path d="M12 3l1.8 4.9L19 10l-5.2 2.1L12 17l-1.8-4.9L5 10l5.2-2.1L12 3ZM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/>',
     "chevron": '<path d="m9 6 6 6-6 6"/>',
     "calendar": '<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+    "ticket": '<path d="M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a2 2 0 0 0 0-4V8Z"/><path d="M14 6v2.5M14 10.8v2.4M14 15.5V18"/>',
     "layers": '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
 }
 
@@ -225,10 +226,10 @@ PROJECTS = [
          regions=[("EG", "Egypt", "pink"), ("SA", "Saudi Arabia", "green")],
          desc="Clean-architecture Web API automating invoice generation, customer billing and payment tracking for trips, reservations and receipt vouchers.",
          tags=["ASP.NET Core", "EF Core", "SQL Server", "JWT", "AutoMapper"], blobs=[("orange", .1, .2, .5), ("pink", .9, .9, .5)]),
-    dict(slug="tph", short="Recruitment", name="TPH Emirates", kicker="Recruitment platform", color="blue", ico="users",
-         regions=[("AE", "UAE", "teal")],
-         desc="A production recruitment system for a UAE manpower group, connecting a public portal to Dynamics 365 CRM for end-to-end candidate management.",
-         tags=[".NET Web API", "Angular", "SQL Server", "Dynamics 365"], blobs=[("blue", .1, .2, .5), ("cyan", .9, .9, .5)]),
+    dict(slug="watchy", short="E-cinema", name="Watchy", kicker="E-cinema booking platform", color="pink", ico="ticket",
+         regions=[("EG", "Egypt", "pink")],
+         desc="A full e-cinema platform where users browse movies, pick showtimes, book seats and manage their cinema tickets end to end.",
+         tags=["ASP.NET MVC", "C#", "Entity Framework", "SQL Server", "jQuery"], blobs=[("pink", .1, .2, .5), ("purple", .9, .9, .5)]),
     dict(slug="mindmission", short="E-learning", name="Mind Mission", kicker="E-learning platform", color="green", ico="book",
          regions=[("EG", "Egypt", "pink"), ("SA", "Saudi Arabia", "green")],
          desc="A Udemy-style platform where students browse, purchase and take courses, with full course-management tools for instructors and Power BI analytics.",
@@ -558,28 +559,22 @@ def panel_links(mode):
     C = compact()
     PW = 1000
     G = SECTION_GAP
-    inner = 250 if C else 150
+    inner = 120 if C else 76
     H = G + 4 + inner + 4 + G
     d = Doc(PW, H, mode, "Links")
     t = d.t
-    d.glass(4, G + 4, PW - 8, inner, 30, [("blue", .05, .3, .3), ("indigo", .35, 1.0, .3), ("orange", .65, 0, .3), ("green", .95, .8, .3)])
+    d.glass(4, G + 4, PW - 8, inner, 30 if C else 26, [("blue", .05, .3, .3), ("indigo", .35, 1.0, .3), ("orange", .65, 0, .3), ("green", .95, .8, .3)])
     cw = PW / 4
     top = G + 4
+    ts, fs, gap = (50, 25, 10) if C else (40, 19, 12)
     for i, (key, label, sub, ico, col) in enumerate(LINK_TILES):
         cx = i * cw
         if i:
-            vline(d, cx - 1, top + 30, inner - 60)
-        if C:
-            ts = 110
-            d.tile(cx + (cw - ts) / 2, top + 34, ts, col, ico)
-            d.body.append(T(cx + cw / 2, top + 34 + ts + 66, label, 42, t["ink"], 720, "middle", ls="-.4"))
-        else:
-            ts = 52
-            px = cx + 30
-            d.tile(px, top + 28, ts, col, ico)
-            d.body.append(icon("chevron", cx + cw - 46, top + 42, 22, t["ink3"], 2.4))
-            d.body.append(T(px, top + 108, label, 21, t["ink"], 720, ls="-.2"))
-            d.body.append(T(px, top + 130, sub, 14, t["ink2"], 550))
+            vline(d, cx - 1, top + inner * .25, inner * .5)
+        group = ts + gap + tw(label, fs)
+        gx = cx + (cw - group) / 2
+        d.tile(gx, top + (inner - ts) / 2, ts, col, ico)
+        d.body.append(T(gx + ts + gap, top + inner / 2 + fs * .36, label, fs, t["ink"], 700, ls="-.2"))
     slices = [(i * cw, 0, cw, H, LINK_TILES[i][1]) for i in range(4)]
     return d, slices
 
@@ -644,7 +639,7 @@ def panel_projects(mode):
     tx = pad + ts + 18
     d.body.append(T(tx, top + hdr / 2 - (4 if C else 2), "Featured projects", 44 if C else 22, t["ink"], 740, ls="-.4"))
     d.body.append(T(tx, top + hdr / 2 + (36 if C else 20), "Tap a card to open it" if C else "Production platforms · click a card to open its repository", 26 if C else 14, t["ink2"], 500))
-    meta = "4 platforms · 3 countries"
+    meta = "4 featured projects"
     msz = 22 if C else 13
     mh = 46 if C else 28
     if not C:
