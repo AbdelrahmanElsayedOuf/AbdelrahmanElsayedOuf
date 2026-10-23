@@ -558,7 +558,7 @@ def panel_links(mode):
     """One wide glass panel holding all four links; sliced into 4 clickable columns."""
     C = compact()
     PW = 1000
-    G = SECTION_GAP
+    G = 0   # links row sits closer to its neighbours (they carry the small gap)
     inner = 120 if C else 76
     H = G + 4 + inner + 4 + G
     d = Doc(PW, H, mode, "Links")
@@ -782,8 +782,9 @@ def main():
             if stats_only:
                 continue
             C = width < 700
-            save(f"header{suffix}-{mode}.svg", spaced(card_header(mode), 0, SECTION_GAP))
-            save(f"about{suffix}-{mode}.svg", spaced(with_header(card_about(mode), "About me", "sparkles", "purple", "Cairo · Since 2023")))
+            LG = 3.2 if C else 4   # 1/3 of the normal section gap around the links row
+            save(f"header{suffix}-{mode}.svg", spaced(card_header(mode), 0, LG))
+            save(f"about{suffix}-{mode}.svg", spaced(with_header(card_about(mode), "About me", "sparkles", "purple", "Cairo · Since 2023"), LG, SECTION_GAP))
             save(f"toolbox{suffix}-{mode}.svg", spaced(with_header(card_toolbox(mode), "Toolbox", "code", "pink", "6 areas" if C else "6 areas · 30+ tools")))
             save(f"footer{suffix}-{mode}.svg", spaced(card_footer(mode), SECTION_GAP, 0))
             for prefix, builder, names in [("link", panel_links, [k for k, *_ in LINK_TILES]),
