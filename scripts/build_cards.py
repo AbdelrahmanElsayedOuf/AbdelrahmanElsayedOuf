@@ -512,19 +512,27 @@ def card_footer(mode):
     t = THEMES[mode]
     if not C:
         d = Doc(W, 150, mode, "Let's build something together")
-        d.glass(4, 4, W - 8, 142, 32, [("purple", .1, .1, .45), ("blue", .9, .9, .45)])
+        d.glass(4, 4, W - 8, 142, SECTION_R, [("purple", .1, .1, .45), ("blue", .9, .9, .45)])
         d.tile(40, 39, 72, "purple", "sparkles")
         d.body.append(T(136, 70, "Let's build something together", 26, t["ink"], 740, ls="-.3"))
         d.body.append(T(136, 102, "Open to full-time roles and freelance work · abd-elrahman_elsayed@outlook.com", 15.5, t["ink2"], 500))
         return d
     d = Doc(W, 236, mode, "Let's build something together")
-    d.glass(4, 4, W - 8, 228, 32, [("purple", .1, .1, .45), ("blue", .9, .9, .45)])
+    d.glass(4, 4, W - 8, 228, SECTION_R, [("purple", .1, .1, .45), ("blue", .9, .9, .45)])
     d.tile(32, 32, 64, "purple", "sparkles")
     d.body.append(T(32, 140, "Let's build together", 30, t["ink"], 750, ls="-.3"))
     d.body.append(T(32, 174, "Open to full-time roles and freelance work", 17, t["ink2"], 500))
     d.body.append(T(32, 202, "abd-elrahman_elsayed@outlook.com", 17, IOS["blue"][t["idx"]], 650))
     return d
 
+
+
+SECTION_R = 34
+
+
+def panel_r():
+    """Radius on the 1000-wide panel canvas that displays the same as SECTION_R on a W-wide card."""
+    return round(SECTION_R * 1000 / W, 1)
 
 
 # ───────────────────── tiled sections (each tile = its own link) ─────────────────────
@@ -563,7 +571,7 @@ def panel_links(mode):
     H = G + 4 + inner + 4 + G
     d = Doc(PW, H, mode, "Links")
     t = d.t
-    d.glass(4, G + 4, PW - 8, inner, 30 if C else 26, [("blue", .05, .3, .3), ("indigo", .35, 1.0, .3), ("orange", .65, 0, .3), ("green", .95, .8, .3)])
+    d.glass(4, G + 4, PW - 8, inner, panel_r(), [("blue", .05, .3, .3), ("indigo", .35, 1.0, .3), ("orange", .65, 0, .3), ("green", .95, .8, .3)])
     cw = PW / 4
     top = G + 4
     ts, fs, gap = (50, 25, 10) if C else (40, 19, 12)
@@ -630,7 +638,7 @@ def panel_projects(mode):
     H = G + 4 + hdr + 2 * ch + 4 + G
     d = Doc(PW, H, mode, "Featured projects")
     t = d.t
-    d.glass(4, G + 4, PW - 8, H - 2 * G - 8, 32,
+    d.glass(4, G + 4, PW - 8, H - 2 * G - 8, panel_r(),
             [("indigo", .05, .2, .3), ("orange", .95, .25, .3), ("green", .05, .85, .3), ("blue", .95, .9, .3)])
     top = G + 4
     pad = 34 if C else 30
